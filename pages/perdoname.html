@@ -3,20 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css-perdoname.css">
-    <link rel="icon" href="https://liuxss.github.io/chelsibirthday.github.io/pages/perdoname.html/img/hearth.png">
-    <title>Perdoname preciosa :(</title>
+    
+    <title>Perdoname preciosaa :(</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: #34495e; /* Fondo gris azulado */
+            text-align: center;
+            color: #fff; /* Color del texto */
+        }
+
+        #content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+        }
+
+        #image-container {
+            position: relative;
+            width: 90vw; /* Ancho del 90% de la ventana */
+            max-width: 300px;
+            margin: 0 auto; /* Centrar el contenedor de la imagen */
+        }
+
+        #image {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px; /* Bordes redondeados */
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); /* Difuminado más pronunciado */
+        }
+
+        #text {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        #buttons {
+            margin-top: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+
+        #button-yes {
+            background-color: #4caf50; /* Color verde para el botón "Sí" */
+            color: #fff;
+        }
+
+        #button-no {
+            background-color: #e74c3c; /* Color rojo para el botón "No" */
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-    <div class="text-image">
-        <img src="https://liuxss.github.io/chelsibirthday.github.io/img/Cat.jpg" alt="">
-        <h1>Me perdonas bizcochito? :c</h1>
+    <div id="content">
+        <div id="image-container">
+            <img id="image" src="https://liuxss.github.io/chelsibirthday.github.io/img/Cat.jpg" alt="Cat Image">
+        </div>
+        <div id="text">Me perdonas bizcochit? :(</div>
+        <div id="buttons">
+            <a class="button" id="button-yes" href="#" onclick="acceptApology()">Sí</a>
+            <a class="button" id="button-no" href="#" onclick="changeText()">No</a>
+        </div>
     </div>
-    <div class="buttons">
-        <button>Si</button>
-        <button>No perro</button>
-    </div>
-    </div>
+
+    <script>
+        function changeText() {
+            var textOptions = [
+                "Por favoooooor",
+                "Andaleeeee",
+                "Voy a chillar 🥺",
+                "Le voy a decir a tu mama 😭😭😭",
+                "😭😭😭",
+                "Perdoname yaaaa 😭",
+                "Ya no aguantooo ☹️",
+                "Con quien me voy a casar? 😭"
+            ];
+            var randomIndex = Math.floor(Math.random() * textOptions.length);
+            document.getElementById("text").textContent = textOptions[randomIndex];
+        }
+
+        function acceptApology() {
+            document.getElementById("text").textContent = "Gracias bizcochito te quiero 🥺";
+            document.getElementById("image").src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1oZ6GQaL4BFBOvziJMls6JZUxaUAa9ebMlQ&usqp=CAU"; // Reemplaza con la URL de la nueva imagen
+        }
+    </script>
 </body>
 </html>
